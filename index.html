@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zetta: Closed-Loop Embodied Learning for Self-Evolving Physical Intelligence</title>
-  <meta name="description" content="Zetta is a closed-loop embodied harness that evolves runtime critics and recovery skills online while the base policy model stays frozen, powered by Z-Infra, the first rollout infrastructure designed for self-evolving embodied agents.">
+  <title>Zetta &zeta;: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence</title>
+  <meta name="description" content="Zetta ζ is a closed-loop embodied harness that evolves runtime critics and recovery skills online while the base policy model stays frozen, powered by Z-Infra, the first rollout infrastructure designed for self-evolving embodied agents.">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -107,7 +107,7 @@
     .fig-videos figure.fig{max-width:820px;}
 
     /* stat cards */
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
     @media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr);}}
     .stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.2rem 1rem;text-align:center;}
     .stat .num{font-weight:800;font-size:1.9rem;color:var(--accent);letter-spacing:0;}
@@ -236,9 +236,8 @@
     <canvas class="hero-dots" aria-hidden="true"></canvas>
     <div class="section" style="padding-top:3.4rem;padding-bottom:2.4rem;">
       <div class="container has-text-centered">
-        <span class="badge-eyebrow">Preprint &middot; Self-Evolving Embodied Intelligence</span>
         <h1 class="title-main serif" style="margin-top:1rem;">
-          <span class="title-line"><span class="brand">Zetta</span>: Closed-Loop Embodied Learning</span>
+          <span class="title-line"><span class="brand">Zetta &zeta;</span>: An Efficient Closed-Loop Embodied Harness</span>
           <span class="title-line">for Self-Evolving Physical Intelligence</span>
         </h1>
 
@@ -255,7 +254,7 @@
           Yaoyu Guo,
           Weijun Wang,
           Kun Li,
-          Hao Wu<span class="sup">&dagger;</span>,
+          Hao Wu <span class="sup">&dagger;&ddagger;</span>,
           Yunxin Liu<span class="sup">&dagger;</span>,
           Ting Cao<span class="sup">&dagger;</span>
         </div>
@@ -265,12 +264,17 @@
         <div class="notes tight">
           <span class="sup">*</span> Equal contribution &nbsp;
           <span class="sup">&dagger;</span> Corresponding author &nbsp;
-          Project lead: Ting Cao
+          <span class="sup">&ddagger;</span> Work done during a visit to AIR, Tsinghua
+        </div>
+        <div class="notes tight">
+          &nbsp;Technical lead: Xin Ding, Liang Mi
+          &nbsp;
+          Project lead: Ting Cao (tingcao@mail.tsinghua.edu.cn)
         </div>
 
         <div class="links">
-          <a class="btn-pill" href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i>&nbsp;arXiv</a>
-          <a class="btn-pill ghost" href="https://github.com/air-embodied-brain/zetta" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          <a class="btn-pill" href="https://fe-1301391939.cos.ap-shanghai.myqcloud.com/zetta/zetta.pdf" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i>&nbsp;Tech Report</a>
+          <a class="btn-pill ghost" href="https://github.com/air-embodied-brain/zetta-code" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
           <a class="btn-pill ghost" href="#bibtex"><i class="fas fa-quote-right"></i> BibTeX</a>
         </div>
       </div>
@@ -282,8 +286,10 @@
       <div class="stats">
         <div class="stat"><div class="num" data-countup-target="90.8" data-countup-decimals="1" data-countup-suffix="%">90.8%</div><div class="lab"><span class="line">LIBERO-Pro Goal</span><span class="line">average task success</span></div></div>
         <div class="stat"><div class="num" data-countup-target="93.6" data-countup-decimals="1" data-countup-suffix="%">93.6%</div><div class="lab"><span class="line">RoboCasa 18-task</span><span class="line">average success</span></div></div>
-        <div class="stat"><div class="num" data-countup-target="20.6" data-countup-decimals="1" data-countup-suffix="&times;">20.6&times;</div><div class="lab"><span class="line">valid rollout throughput</span><span class="line">with Z-Infra</span></div></div>
+        <div class="stat"><div class="num" data-countup-target="20.6" data-countup-decimals="1" data-countup-suffix="&times;">20.6&times;</div><div class="lab"><span class="line">valid rollout throughput</span><span class="line">with <b>Zetta &zeta;</b></span></div></div>
+        <div class="stat"><div class="num" data-countup-target="56.3" data-countup-decimals="1" data-countup-prefix="+" data-countup-suffix=" pt">+56.3 pt</div><div class="lab"><span class="line">LIBERO-Pro absolute gain</span><span class="line">over frozen VLA</span></div></div>
         <div class="stat"><div class="num" data-countup-target="20" data-countup-prefix="+" data-countup-suffix=" pt">+20 pt</div><div class="lab"><span class="line">RoboCasa absolute gain</span><span class="line">over frozen VLA</span></div></div>
+        <div class="stat"><div class="num" data-countup-target="11.1" data-countup-decimals="1" data-countup-suffix="&times;">11.1&times;</div><div class="lab"><span class="line"><b>Zetta &zeta;</b> inference speedup</span></div></div>
       </div>
     </div>
   </section>
@@ -292,11 +298,10 @@
     <div class="container teaser-container">
       <div class="teaser-scroll">
         <figure class="fig teaser">
-          <img src="https://fe-1301391939.cos.ap-shanghai.myqcloud.com/zetta/teaser.png" alt="Zetta teaser: closed-loop self-evolution for embodied agents">
+          <img src="https://fe-1301391939.cos.ap-shanghai.myqcloud.com/zetta/teaser_new.png" alt="Zetta ζ teaser: closed-loop self-evolution for embodied agents">
           <figcaption class="has-text-left tight">
-            <b>Zetta closes the loop for embodied self-evolution.</b>
-            Frequent runtime critics trigger recoveries during execution, while verified failures are distilled into reusable critic and recovery skills across rollouts.
-            A hardware-decoupled rollout layer scales this process across heterogeneous environments, models, CPUs, and GPUs.
+            <b>Zetta &zeta; closes the loop for embodied self-evolution.</b>
+            Frequent runtime critics trigger recoveries during execution, while verified failures are distilled into reusable critic and recovery skills across rollouts. A hardware-decoupled rollout layer scales this process across heterogeneous environments, models, CPUs, and GPUs. <b>Zetta &zeta;</b> enables sustained same-task improvement, zero-shot skill transfer, robotic "Aha moment", and accelerated agent execution.
           </figcaption>
         </figure>
       </div>
@@ -307,12 +312,7 @@
     <div class="container tight">
       <h2 class="sec">Abstract</h2>
       <p class="lead">
-        Embodied agents are increasingly used to close the gap left by end-to-end policy models.
-        Yet existing embodied agent harnesses remain static and open-loop, following fixed skills rather than adapting to dynamic environments during rollout, because physical execution demands high-frequency governance that today&rsquo;s agentic reflection cannot provide.
-        We present <b>Zetta</b>, a closed-loop embodied harness that <span class="hl">evolves code-based runtime critics and recovery skills online while the base policy model stays frozen</span>.
-        Three loops operate at different timescales to enable harness self-evolution: a <b>Critic-Governed Action Loop</b> governs execution at action frequency, a <b>Rollout-Batch Candidate Optimization Loop</b> proposes candidate critics and recoveries from clustered failures, and a <b>Validation-Gated Skill Update Loop</b> admits only updates that improve and generalize success.
-        We further build <b>Z-Infra</b>, the first rollout infrastructure designed for self-evolving embodied agents, decoupling agent logic from hardware.
-        Evaluating on LIBERO and RoboCasa, Zetta achieves state-of-the-art task success, continuously scales with evolution iterations, transfers learned skills zero-shot across tasks, and substantially increases rollout throughput.
+        Embodied agents are increasingly used to close the gap left by end-to-end policy models. Yet the agentic path has not realized closed-loop learning in physical execution: existing harnesses remain largely open-loop, following fixed skills during rollout and reflecting only after an episode completes. Such post-hoc reflection cannot govern execution as it unfolds, because physical interaction requires decisions to track rapidly changing robot-environment states at a frequency beyond today’s large agentic models. We present <b>Zetta &zeta;</b>, a closed-loop embodied harness that evolves code-based runtime critics and recovery skills online while keeping the base policy frozen. Through three timescale-separated loops, <b>Zetta &zeta;</b> provides action-frequency governance, rollout-level critic-recovery proposal, and validation-gated skill updates. Together with Z-Infra, a rollout infrastructure decoupling agent logic from heterogeneous execution resources, <b>Zetta &zeta;</b> achieves state-of-the-art success on LIBERO-Pro and RoboCasa under our current rollout budget, reaching 90.8% and 93.6%, with a 11.1 &times; inference speedup; success continues to scale with self-exploration experience; learned skills transfer zero-shot, and clear robotic "Aha Moments" emerge. These results show that closed-loop harness self-evolution opens a scaling path for reliable physical intelligence.
       </p>
     </div>
   </section>
@@ -357,7 +357,7 @@
     <div class="container">
       <h2 class="sec">Physical-intelligence &ldquo;Aha&rdquo; moments</h2>
       <p class="lead intro-960">
-        Success is not always a smooth curve. Zetta often discovers the key physical bottleneck and unlocks a sharp, discontinuous jump.
+        Success is not always a smooth curve. <b>Zetta &zeta;</b> often discovers the key physical bottleneck and unlocks a sharp, discontinuous jump.
       </p>
       <div class="two-col stacked-figs">
         <figure class="fig plot">
@@ -415,7 +415,7 @@
     <div class="container tight">
       <h2 class="sec">Learned skills transfer zero-shot across tasks</h2>
       <p class="lead">
-        The skills evolved by Zetta are not task-specific trajectories. They are defined by
+        The skills evolved by <b>Zetta &zeta;</b> are not task-specific trajectories. They are defined by
         <span class="hl">object-relative geometry, contact, grasp retention, and progress predicates</span> &mdash; physical invariants that transfer across related tasks.
       </p>
       <div class="signals">
@@ -444,7 +444,7 @@
     <div class="container">
       <h2 class="sec">Z-Infra: rollout infrastructure for self-evolving embodied agents</h2>
       <p class="lead intro-960">
-        Self-evolution is data-hungry: the environment is the source of learning data, so faster rollouts produce faster evolution.
+        Self-exploration in the environment is the source of learning data, so faster rollouts produce faster evolution.
       </p>
 
       <figure class="fig plot infra-figure">
@@ -475,12 +475,12 @@
   <section class="section">
     <div class="container">
       <h2 class="sec">Benchmark results</h2>
-      <p class="lead benchmark-intro">
+      <!-- <p class="lead benchmark-intro">
         All improvements come from evolving the harness, not from changing the frozen VLA weights.
-      </p>
+      </p> -->
       <div class="table-block main-table">
         <div class="table-title">
-          <b>Table:</b> Success rates (%) on LIBERO-Pro and RoboCasa. Bold marks Zetta.
+          <b>Table:</b> Success rates (%) on LIBERO-Pro and RoboCasa. Bold marks <b>Zetta &zeta;</b>.
           LIBERO-Pro Goal (T/S) and LIBERO-10 (T/S) are averaged over ten tasks each; RoboCasa is the macro-average over 18 Atomic-Seen tasks.
         </div>
         <div class="table-scroll">
@@ -490,7 +490,7 @@
                 <th scope="col">Benchmark</th>
                 <th scope="col">Setting</th>
                 <th scope="col">Frozen VLA</th>
-                <th scope="col">Zetta</th>
+                <th scope="col"><b>Zetta &zeta;</b></th>
               </tr>
             </thead>
             <tbody>
@@ -550,23 +550,20 @@
     <div class="container tight">
       <h2 class="sec">BibTeX</h2>
       <pre class="bib">@misc{zetta2026,
-  title         = {Zetta: Closed-Loop Embodied Learning for Self-Evolving
-                   Physical Intelligence},
+  title         = {<b>Zetta &zeta;</b>: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence},
   author        = {Ding, Xin and Mi, Liang and Huang, Mingzhe and Wang, Zixuan
                    and Zhang, Chao and Hao, Zixu and Chen, Fu and Li, Xiangyu
                    and Zheng, Yikai and Guo, Yaoyu and Wang, Weijun and Li, Kun
                    and Wu, Hao and Liu, Yunxin and Cao, Ting},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.RO}
+  howpublished = {https://AIR-embodied-brain.github.io/zetta/}
 }</pre>
     </div>
   </section>
 
   <footer>
-    <p>Project page for <b>Zetta</b>: Closed-Loop Embodied Learning for Self-Evolving Physical Intelligence.</p>
-    <p style="margin-top:.4rem;"><a href="https://github.com/air-embodied-brain/zetta" target="_blank" rel="noopener">Code</a> &middot; <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">arXiv</a></p>
+    <p>Project page for <b>Zetta &zeta;</b>: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence.</p>
+    <p style="margin-top:.4rem;"><a href="https://github.com/air-embodied-brain/zetta-code" target="_blank" rel="noopener">Code</a> &middot; <a href="https://fe-1301391939.cos.ap-shanghai.myqcloud.com/zetta/zetta.pdf" target="_blank" rel="noopener">Tech Report</a></p>
   </footer>
 
   <script>
